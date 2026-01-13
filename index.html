@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VAS LOGISTICS Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                50: '#f0f9ff',
+                100: '#e0f2fe',
+                200: '#bae6fd',
+                300: '#7dd3fc',
+                400: '#38bdf8',
+                500: '#0ea5e9',
+                600: '#0284c7',
+                700: '#0369a1',
+                800: '#075985',
+                900: '#0c4a6e',
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'fly': 'fly 5s ease-in-out',
+              'fly-across': 'flyAcross 12s ease-in-out',
+              'rainbow': 'rainbow 3s linear infinite',
+              'lightning-flicker': 'lightningFlicker 0.15s ease-in-out infinite',
+              'energy-dash': 'energyDash 1.5s linear infinite',
+              'magnetic-glow': 'magneticGlow 2s ease-in-out infinite',
+              'dash-slide': 'dashSlide 2s linear infinite',
+              'energy-run': 'energyRun 2s ease-in-out infinite',
+            },
+            keyframes: {
+              dashSlide: {
+                'to': { 'stroke-dashoffset': '-20' }
+              },
+              energyRun: {
+                '0%': { offsetDistance: '0%', opacity: '0' },
+                '10%': { opacity: '1' },
+                '90%': { opacity: '1' },
+                '100%': { offsetDistance: '100%', opacity: '0' }
+              },
+              lightningFlicker: {
+                '0%, 100%': { opacity: '0.4', filter: 'brightness(1)' },
+                '50%': { opacity: '1', filter: 'brightness(2) contrast(1.5)' }
+              },
+              energyDash: {
+                'to': { 'stroke-dashoffset': '-20' }
+              },
+              magneticGlow: {
+                '0%, 100%': { transform: 'scale(1)', opacity: '0.3' },
+                '50%': { transform: 'scale(1.1)', opacity: '0.7' }
+              },
+              fly: {
+                '0%, 100%': { transform: 'translate(0, 0) rotate(0deg)' },
+                '10%': { transform: 'translate(0, -10px) rotate(0deg)' }, 
+                '20%': { transform: 'translate(50px, -50px) rotate(10deg) scale(1.1)' }, 
+                '40%': { transform: 'translate(100px, -20px) rotate(5deg) scale(1.1)' }, 
+                '60%': { transform: 'translate(-50px, -80px) rotate(-10deg) scale(1.1)' }, 
+                '80%': { transform: 'translate(-20px, -40px) rotate(-5deg) scale(1.1)' }, 
+                '90%': { transform: 'translate(0, -10px) rotate(0deg)' }, 
+              },
+              flyAcross: {
+                '0%': { transform: 'translate(0, 0) scale(1)' },
+                '5%': { transform: 'translate(0, -20px) rotate(-10deg) scale(1.1)' }, 
+                '10%': { transform: 'translate(20px, -50px) rotate(15deg) scale(1.1)' }, 
+                '45%': { transform: 'translate(75vw, 20vh) rotate(5deg) scale(1.1)' }, 
+                '50%': { transform: 'translate(78vw, 25vh) rotate(0deg) scale(1.1) scaleX(-1)' }, 
+                '55%': { transform: 'translate(75vw, 20vh) rotate(-5deg) scale(1.1) scaleX(-1)' }, 
+                '90%': { transform: 'translate(0, -50px) rotate(-15deg) scale(1.1) scaleX(-1)' }, 
+                '95%': { transform: 'translate(0, -20px) rotate(0deg) scale(1.1) scaleX(1)' }, 
+                '100%': { transform: 'translate(0, 0) scale(1) scaleX(1)' } 
+              },
+              rainbow: {
+                '0%': { filter: 'hue-rotate(0deg)' },
+                '100%': { filter: 'hue-rotate(360deg)' }
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #0B1020; 
+        color: #e2e8f0; 
+      }
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #111827; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #374151; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #4b5563; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
